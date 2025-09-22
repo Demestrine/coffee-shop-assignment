@@ -1,4 +1,3 @@
-
 from order import Order
 
 class Coffee:
@@ -35,4 +34,3 @@ class Coffee:
         if not orders_list:
             return 0
         return sum(order.price for order in orders_list) / len(orders_list)
-

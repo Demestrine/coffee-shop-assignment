@@ -32,3 +32,16 @@ class Customer:
             raise Exception("Must provide a valid Coffee object")
         return Order(self, coffee, price)
 
+    @classmethod
+    def most_aficionado(cls, coffee):
+        """Return the customer who spent the most on a specific coffee"""
+        if not isinstance(coffee, Coffee):
+            raise Exception("Must provide a valid Coffee object")
+        max_spent = 0
+        top_customer = None
+        for customer in cls.all_customers:
+            total = sum(order.price for order in customer.orders() if order.coffee == coffee)
+            if total > max_spent:
+                max_spent = total
+                top_customer = customer
+        return top_customer

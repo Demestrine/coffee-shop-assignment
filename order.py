@@ -1,11 +1,11 @@
-# order.py
+
+from customer import Customer
+from coffee import Coffee
+
 class Order:
     all_orders = []
 
     def __init__(self, customer, coffee, price: float):
-        from customer import Customer
-        from coffee import Coffee
-
         if not isinstance(customer, Customer):
             raise Exception("Invalid Customer object")
         if not isinstance(coffee, Coffee):
@@ -21,4 +21,3 @@ class Order:
     @property
     def price(self):
         return self._price
-
