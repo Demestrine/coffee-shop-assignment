@@ -8,9 +8,9 @@ class TestCustomer:
     
     def test_customer_creation(self):
         """Basic test - can we create a customer with a valid name?"""
-        customer = Customer("John")
-        assert customer.name == "John"  # Should store the name correctly
-    
+        customer = Customer("Awuor")
+        assert customer.name == "Awuor"  # Should store the name correctly
+
     def test_invalid_name_length(self):
         """Test that we properly reject names that are too short or too long"""
 # Empty name should be rejected
@@ -28,7 +28,7 @@ class TestCustomer:
     
     def test_orders_relationship(self):
         """Test that we can find all orders for a specific customer"""
-        customer = Customer("Jane")
+        customer = Customer("Miminifire")
         coffee = Coffee("Latte")
         order = Order(customer, coffee, 5.0)
         
@@ -38,7 +38,7 @@ class TestCustomer:
     
     def test_coffees_relationship(self):
         """Test that we get unique coffees a customer has ordered"""
-        customer = Customer("Bob")
+        customer = Customer("Demmy")
         coffee1 = Coffee("Espresso")
         coffee2 = Coffee("Latte")
         
@@ -53,7 +53,7 @@ class TestCustomer:
     
     def test_create_order(self):
         """Test the convenience method for creating orders"""
-        customer = Customer("Charlie")
+        customer = Customer("Wantaaaaam")
         coffee = Coffee("Mocha")
         order = customer.create_order(coffee, 8.5)
         

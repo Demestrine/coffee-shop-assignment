@@ -9,7 +9,7 @@ class TestOrder:
     
     def test_order_creation(self):
 # Basic order creation test
-        customer = Customer("Eve")
+        customer = Customer("wantam")
         coffee = Coffee("Mocha")
         order = Order(customer, coffee, 7.5)
         
@@ -19,7 +19,7 @@ class TestOrder:
     
     def test_invalid_price_range(self):
  # Test price range validation
-        customer = Customer("Frank")
+        customer = Customer("Mustgo")
         coffee = Coffee("Americano")
         
         with pytest.raises(Exception):
@@ -30,7 +30,7 @@ class TestOrder:
     
     def test_price_immutability(self):
 # Test that prices can't be changed
-        customer = Customer("Grace")
+        customer = Customer("Awuor")
         coffee = Coffee("Latte")
         order = Order(customer, coffee, 5.0)
         
@@ -39,7 +39,7 @@ class TestOrder:
     
     def test_invalid_price_type(self):
  # Test that non-float prices are rejected
-        customer = Customer("Henry")
+        customer = Customer("Mustmustgooo")
         coffee = Coffee("Espresso")
         
         with pytest.raises(Exception):
